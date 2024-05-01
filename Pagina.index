@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alejandro Giraldo Gonzales - Página de Videojuegos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f3f3;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #444;
+        }
+        #container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        li strong {
+            font-weight: bold;
+            color: #333;
+        }
+        #contact-form {
+            margin-top: 40px;
+        }
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bienvenido a la Página de Videojuegos de Alejandro Giraldo Gonzales</h1>
+    </header>
+    <div id="container">
+        <h2>Sobre mí</h2>
+        <p>¡Hola! Mi nombre es Alejandro Giraldo Gonzales y soy un apasionado de los videojuegos. Me encanta explorar diferentes mundos virtuales, descubrir nuevas historias y desafiar mis habilidades en diversos juegos.</p>
+        
+        <h2>Selección de Videojuegos</h2>
+        <ul>
+            <li><strong>Assassin's Creed Valhalla:</strong> Embárcate en una épica aventura vikinga en la Inglaterra del siglo IX.</li>
+            <li><strong>The Legend of Zelda: Breath of the Wild:</strong> Explora un vasto mundo abierto lleno de misterios y desafíos.</li>
+            <li><strong>Overwatch:</strong> Únete a un equipo de héroes y lucha por la victoria en emocionantes combates en línea.</li>
+            <li><strong>Red Dead Redemption 2:</strong> Vive la vida de un forajido en el salvaje oeste y explora un mundo abierto lleno de peligros y oportunidades.</li>
+        </ul>
+        
+        <h2>Contacto</h2>
+        <p>¡Siéntete libre de contactarme para hablar sobre videojuegos o cualquier otro tema relacionado!</p>
+        <form id="contact-form" action="#" method="post">
+            <input type="text" name="name" placeholder="Nombre" required>
+            <input type="text" name="email" placeholder="Correo electrónico" required>
+            <textarea name="message" placeholder="Mensaje" rows="4" required></textarea>
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+</body>
+</html>
