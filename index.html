@@ -1,205 +1,33 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Videojuegos - Alejandro Giraldo Gonzalez</title>
-    <link rel="stylesheet" href="css/styles.css">
-        <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            /* Cambia el color de fondo a la imagen deseada */
-            background-image: url('https://img.freepik.com/vector-gratis/fondo-abstracto-lluvia-pixeles_23-2148383734.jpg?w=1380&t=st=1715127341~exp=1715127941~hmac=98b09895c7acb5d47db52ecee15ba925bfc4eb8aaebcc131158cf1ad3ea2e7af');
-            /* Ajusta la imagen de fondo según tus preferencias */
-            background-size: cover;
-            background-position: center;
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-            border-bottom: 2px solid #444;
-        }
-        #container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.8); /* Fondo semitransparente para mejorar legibilidad */
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            margin-top: 20px;
-            margin-bottom: 20px;
-            color: #fff; /* Color del texto dentro del contenedor */
-        }
-        h1, h2 {
-            color: #fff; /* Color del texto */
-            margin-bottom: 10px;
-        }
-        p {
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-        li {
-            margin-bottom: 10px;
-        }
-        li strong {
-            font-weight: bold;
-            color: #fff; /* Color del texto */
-        }
-        #contact-form {
-            margin-top: 40px;
-        }
-        input[type="text"],
-        textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-        input[type="submit"] {
-            background-color: #333;
-            color: #fff;
-            border: none;
-            padding: 12px 20px;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        input[type="submit"]:hover {
-            background-color: #555;
-        }
-    </style>
+    <title>Main Menu - Adso 2929061 A</title>
+        <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-    <header>
-        <h1>Alejandro Giraldo Gonzalez</h1>
-        <!-- Aquí puedes añadir un subtítulo si lo deseas -->
-    </header>
-    <div id="container">
-        <section>
-            <h2>Sobre mí</h2>
-            <p>¡Hola! Mi nombre es Alejandro Giraldo Gonzalez y soy un apasionado de los videojuegos. Me encanta explorar diferentes mundos virtuales, descubrir nuevas historias y desafiar mis habilidades en diversos juegos.</p>
-        </section>
-        
-        <section>
-            <h2>Selección de Videojuegos</h2>
-            <ul>
-                <li><strong>Assassin's Creed Valhalla:</strong> Embárcate en una épica aventura vikinga en la Inglaterra del siglo IX.</li>
-                <li><strong>The Legend of Zelda: Breath of the Wild:</strong> Explora un vasto mundo abierto lleno de misterios y desafíos.</li>
-                <li><strong>Overwatch:</strong> Únete a un equipo de héroes y lucha por la victoria en emocionantes combates en línea.</li>
-                <li><strong>Red Dead Redemption 2:</strong> Vive la vida de un forajido en el salvaje oeste y explora un mundo abierto lleno de peligros y oportunidades.</li>
-            </ul>
-        </section>
-        
-        <section>
-            <h2>Contacto</h2>
-            <p>¡Siéntete libre de contactarme para hablar sobre videojuegos o cualquier otro tema relacionado!</p>
-            <form id="contact-form" action="#" method="post">
-                <input type="text" name="name" placeholder="Nombre" required>
-                <input type="text" name="email" placeholder="Correo electrónico" required>
-                <textarea name="message" placeholder="Mensaje" rows="4" required></textarea>
-                <input type="submit" value="Enviar">
-            </form>
-        </section>
-    </div>
-    <div id="container">
-        <!-- Contenido principal -->
-    </div>
-    <div id="game-container">
-        <canvas id="gameCanvas" width="400" height="400"></canvas>
-        <script>
-            // Definición del juego de la culebrita
-            const canvas = document.getElementById("gameCanvas");
-            const ctx = canvas.getContext("2d");
-            const box = 20;
-            let snake = [{ x: 10 * box, y: 10 * box }];
-            let food = { x: Math.floor(Math.random() * 20) * box, y: Math.floor(Math.random() * 20) * box };
-            let score = 0;
-            let d;
-
-            document.addEventListener("keydown", direction);
-
-            function direction(event) {
-                if (event.keyCode === 37 && d !== "RIGHT") {
-                    d = "LEFT";
-                } else if (event.keyCode === 38 && d !== "DOWN") {
-                    d = "UP";
-                } else if (event.keyCode === 39 && d !== "LEFT") {
-                    d = "RIGHT";
-                } else if (event.keyCode === 40 && d !== "UP") {
-                    d = "DOWN";
-                }
-            }
-
-            function draw() {
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-                // Dibujar la comida
-                ctx.fillStyle = "red";
-                ctx.fillRect(food.x, food.y, box, box);
-                ctx.strokeRect(food.x, food.y, box, box); // Dibujar borde alrededor de la comida
-
-                // Dibujar la serpiente
-                for (let i = 0; i < snake.length; i++) {
-                    ctx.fillStyle = (i === 0) ? "green" : "white";
-                    ctx.fillRect(snake[i].x, snake[i].y, box, box);
-                    ctx.strokeRect(snake[i].x, snake[i].y, box, box); // Dibujar borde alrededor de cada parte de la serpiente
-                }
-
-                // Movimiento de la serpiente
-                let snakeX = snake[0].x;
-                let snakeY = snake[0].y;
-
-                if (d === "LEFT") snakeX -= box;
-                if (d === "UP") snakeY -= box;
-                if (d === "RIGHT") snakeX += box;
-                if (d === "DOWN") snakeY += box;
-
-                // Detectar colisión con la pared
-                if (snakeX < 0 || snakeX >= canvas.width || snakeY < 0 || snakeY >= canvas.height) {
-                    clearInterval(game);
-                    alert("Game Over. Puntuación: " + score);
-                    location.reload(); // Reiniciar el juego
-                }
-
-                // Detectar colisión con la comida
-                if (snakeX === food.x && snakeY === food.y) {
-                    score++;
-                    food = { x: Math.floor(Math.random() * 20) * box, y: Math.floor(Math.random() * 20) * box };
-                } else {
-                    snake.pop(); // Eliminar la cola de la serpiente
-                }
-
-                const newHead = { x: snakeX, y: snakeY };
-
-                // Detectar colisión con la serpiente
-                if (snake.some(segment => segment.x === newHead.x && segment.y === newHead.y)) {
-                    clearInterval(game);
-                    alert("Game Over. Puntuación: " + score);
-                    location.reload(); // Reiniciar el juego
-                }
-
-                snake.unshift(newHead); // Agregar nueva cabeza de la serpiente
-
-                // Mostrar la puntuación
-                ctx.fillStyle = "white";
-                ctx.font = "20px Arial";
-                ctx.fillText("Puntuación: " + score, 10, 30);
-            }
-
-            let game = setInterval(draw, 100); // Velocidad del juego (milisegundos)
-        </script>
-    </div>
-</body>
+    <body>
+        <main>
+            <header>
+            <h1>Adso 2929061 A</h1>
+                <h2>Software Analysis & Development</h2>
+                <img src="images/photo.png" alt="My photo">
+                <h3>Juan Esteban González Pérez</h3>
+            </header>
+            <menu>
+                <a href="01-emmet/">
+                    <span>01</span>
+                    Emmet
+                </a>
+                <a href="02-html/">
+                    <span>02</span>
+                    Html
+                </a>
+                <a href="03-css/">
+                    <span>03</span>
+                    css
+                </a>
+            </menu>
+        </main>
+    </body>
 </html>
-
