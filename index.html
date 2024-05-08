@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alejandro Giraldo Gonzales - Página de Videojuegos</title>
+    <title>Página de Videojuegos - Alejandro Giraldo Gonzales</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f3f3f3;
+            /* Cambia el color de fondo a la imagen deseada */
+            background-image: url('https://copilot.microsoft.com/images/create/fondo-de-videojuegos/1-663abfba67bf4ccea51e6cbbd5c7a877?id=G57Y88FfeQCMk%2bmo3f8Nrg%3d%3d&view=detailv2&idpp=genimg&idpclose=1&thId=OIG2.dcR2C7BYESpVkvVe6Hzj&FORM=SYDBIC');
+            /* Ajusta la imagen de fondo según tus preferencias */
+            background-size: cover;
+            background-position: center;
         }
         header {
             background-color: #333;
@@ -22,13 +26,13 @@
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente para mejorar legibilidad */
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
             margin-top: 20px;
             margin-bottom: 20px;
         }
-        h1 {
+        h1, h2 {
             color: #333;
             margin-bottom: 10px;
         }
@@ -72,44 +76,38 @@
         input[type="submit"]:hover {
             background-color: #555;
         }
-         /* Establecer las propiedades de fondo para un div */
-         .background-example {
-            width: 300px;
-            height: 300px;
-            background-image: url('https://copilot.microsoft.com/images/create/fondo-de-videojuegos/1-663abfba67bf4ccea51e6cbbd5c7a877?id=G57Y88FfeQCMk%2bmo3f8Nrg%3d%3d&view=detailv2&idpp=genimg&idpclose=1&thId=OIG2.dcR2C7BYESpVkvVe6Hzj&FORM=SYDBIC');
-            background-repeat: no-repeat; /* No repetir la imagen */
-            background-position: right bottom; /* Posicionar la imagen en la esquina inferior derecha */
-            background-size: cover; /* Escalar la imagen para cubrir completamente el área */
-        }
     </style>
 </head>
 <body>
-    <div class="">
-        
-    </div>
     <header>
         <h1>Bienvenido a la Página de Videojuegos de Alejandro Giraldo Gonzales</h1>
     </header>
     <div id="container">
-        <h2>Sobre mí</h2>
-        <p>¡Hola! Mi nombre es Alejandro Giraldo Gonzales y soy un apasionado de los videojuegos. Me encanta explorar diferentes mundos virtuales, descubrir nuevas historias y desafiar mis habilidades en diversos juegos.</p>
+        <section>
+            <h2>Sobre mí</h2>
+            <p>¡Hola! Mi nombre es Alejandro Giraldo Gonzales y soy un apasionado de los videojuegos. Me encanta explorar diferentes mundos virtuales, descubrir nuevas historias y desafiar mis habilidades en diversos juegos.</p>
+        </section>
         
-        <h2>Selección de Videojuegos</h2>
-        <ul>
-            <li><strong>Assassin's Creed Valhalla:</strong> Embárcate en una épica aventura vikinga en la Inglaterra del siglo IX.</li>
-            <li><strong>The Legend of Zelda: Breath of the Wild:</strong> Explora un vasto mundo abierto lleno de misterios y desafíos.</li>
-            <li><strong>Overwatch:</strong> Únete a un equipo de héroes y lucha por la victoria en emocionantes combates en línea.</li>
-            <li><strong>Red Dead Redemption 2:</strong> Vive la vida de un forajido en el salvaje oeste y explora un mundo abierto lleno de peligros y oportunidades.</li>
-        </ul>
+        <section>
+            <h2>Selección de Videojuegos</h2>
+            <ul>
+                <li><strong>Assassin's Creed Valhalla:</strong> Embárcate en una épica aventura vikinga en la Inglaterra del siglo IX.</li>
+                <li><strong>The Legend of Zelda: Breath of the Wild:</strong> Explora un vasto mundo abierto lleno de misterios y desafíos.</li>
+                <li><strong>Overwatch:</strong> Únete a un equipo de héroes y lucha por la victoria en emocionantes combates en línea.</li>
+                <li><strong>Red Dead Redemption 2:</strong> Vive la vida de un forajido en el salvaje oeste y explora un mundo abierto lleno de peligros y oportunidades.</li>
+            </ul>
+        </section>
         
-        <h2>Contacto</h2>
-        <p>¡Siéntete libre de contactarme para hablar sobre videojuegos o cualquier otro tema relacionado!</p>
-        <form id="contact-form" action="#" method="post">
-            <input type="text" name="name" placeholder="Nombre" required>
-            <input type="text" name="email" placeholder="Correo electrónico" required>
-            <textarea name="message" placeholder="Mensaje" rows="4" required></textarea>
-            <input type="submit" value="Enviar">
-        </form>
+        <section>
+            <h2>Contacto</h2>
+            <p>¡Siéntete libre de contactarme para hablar sobre videojuegos o cualquier otro tema relacionado!</p>
+            <form id="contact-form" action="#" method="post">
+                <input type="text" name="name" placeholder="Nombre" required>
+                <input type="text" name="email" placeholder="Correo electrónico" required>
+                <textarea name="message" placeholder="Mensaje" rows="4" required></textarea>
+                <input type="submit" value="Enviar">
+            </form>
+        </section>
     </div>
 </body>
 </html>
